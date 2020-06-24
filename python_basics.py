@@ -15,9 +15,9 @@ class car:
         # one-line if
         return "yes" if one.max_speed > two.max_speed else "no"
 
-    def name(self):
+    def fit(self):
         """
-        it will return a name of a car
+        it will check of we can fin someone into your vehicale
         """
         pass
 
@@ -28,6 +28,21 @@ print(my_car.max_speed) # 100
 print(his_car.max_speed) # 200
 print(car.min_speed) # 0
 print(f"my car is faster: {car.compare(my_car, his_car)}")
+
+# inheritance
+class bus(car):
+    def __init__(self, max_speed, seats):
+        #car.__init__(self, max_speed) # way1: call the parent constuctor
+        super().__init__(max_speed) # way2: call the parent constuctor
+        self.seats = seats
+
+    def fit(self, passengers):
+        return "yes" if self.seats >= passengers else "no"
+
+passenges = 30
+some_bus = bus(80, 20) # call the car constructor
+print(f"can I fit {passenges} passengers? = {some_bus.fit(passenges)}")
+print(some_bus.max_speed)
 
 exit(0)
 
