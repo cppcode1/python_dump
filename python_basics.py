@@ -1,3 +1,31 @@
+# class fields
+class car:
+    min_speed = None # a static field (common)
+    def __init__(self, max_speed):
+        min_speed = 0 # the local variable in the constructor
+        car.min_speed = min_speed # the static variable
+        self.max_speed = max_speed # the usual field of the instance of the class
+
+my_car = car(100)
+his_car = car(200)
+
+print(my_car.max_speed) # 100
+print(his_car.max_speed) # 200
+print(car.min_speed) # 0
+
+exit(0)
+
+
+# unpack a list (an array)
+message = []
+message.append("operation code")
+message.append("size")
+message.append("data")
+
+opcode, size, data = message
+print(size)
+
+
 # a dictionary is a key-value pairs
 price_list = {
     "car": 80000,
@@ -10,7 +38,6 @@ print(f"house costs {house_price}")
 # unpack keys and values
 for good, price in price_list.items():
     print(f"{good} costs {price}")
-exit(0)
 
 
 # a loop for-item-in-items
