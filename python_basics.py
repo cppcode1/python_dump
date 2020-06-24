@@ -44,6 +44,9 @@ some_bus = bus(80, 20) # call the car constructor
 print(f"can I fit {passenges} passengers? = {some_bus.fit(passenges)}")
 print(some_bus.max_speed)
 
+# was it derived from?
+print(isinstance(some_bus, car))
+
 exit(0)
 
 # unpack a list (an array)
