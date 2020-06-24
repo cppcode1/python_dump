@@ -1,7 +1,7 @@
 # class fields
 class car:
     min_speed = None # a static field (common)
-    def __init__(self, max_speed):
+    def __init__(self, max_speed): # the constructor
         min_speed = 0 # the local variable in the constructor
         car.min_speed = min_speed # the static variable
         self.max_speed = max_speed # the usual field of the instance of the class
@@ -14,7 +14,6 @@ print(his_car.max_speed) # 200
 print(car.min_speed) # 0
 
 exit(0)
-
 
 # unpack a list (an array)
 message = []
