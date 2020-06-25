@@ -1,12 +1,18 @@
+# a lambda function (anonimous functions)
+def call_lambda(some_lambda):
+    some_lambda(value=10)
+call_lambda(lambda value: print(value))
+exit(0)
+
 # to call a function inside another functions
-ef f1(): print("inside f1()")
+def f1(): print("inside f1()")
 def f2(pointer_to_some_function):
     print(callable(pointer_to_some_function)) # True\
     if callable(pointer_to_some_function):
         pointer_to_some_function()
+
 f2(f1)
 
-exit(0)
 
 # to loop for a range of numbers
 for number in range(0, 10):
