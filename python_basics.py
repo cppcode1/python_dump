@@ -1,3 +1,50 @@
+# to call a function inside another functions
+ef f1(): print("inside f1()")
+def f2(pointer_to_some_function):
+    print(callable(pointer_to_some_function)) # True\
+    if callable(pointer_to_some_function):
+        pointer_to_some_function()
+f2(f1)
+
+exit(0)
+
+# to loop for a range of numbers
+for number in range(0, 10):
+    print(number, end=", ")
+print("", end="\n")
+
+
+# filter(): to find elements that suit you
+class car: 
+    def __init__(self, name, price): self.name = name; self.price = price
+    def __str__(self): return self.name
+
+cars = [ car("audi", 100), car("nissan", 200), car("honda", 300)]
+my_money = 100
+
+def costs_no_more_than(car): 
+    global my_money; return True if car.price <= my_money else False
+
+found_cars = list(filter(costs_no_more_than, cars))
+for car in found_cars: print(f"the car you can allow yourself is {car.name}")
+
+
+# map(): perform the action on each element of the array
+goods_list = []
+goods_list.append("bread")
+def sale(good, percent): return f"today {good} {percent} % cheaper"
+goods_with_sale = list(map(sale, goods_list, "10" * 10))
+print(goods_with_sale)
+
+# a global valiable and how we can change it
+global_variable = 1
+def change_global_variable():
+    global global_variable
+    global_variable = 2
+
+change_global_variable()
+print(global_variable) // 2
+
 # class fields, static method 
 class car:
     """
@@ -30,7 +77,7 @@ print(car.min_speed) # 0
 print(f"my car is faster: {car.compare(my_car, his_car)}")
 
 # inheritance
-class bus(car):
+class bus(car): # add more parent classes to multiple inheritance
     def __init__(self, max_speed, seats):
         #car.__init__(self, max_speed) # way1: call the parent constuctor
         super().__init__(max_speed) # way2: call the parent constuctor
@@ -47,7 +94,6 @@ print(some_bus.max_speed)
 # was it derived from?
 print(isinstance(some_bus, car))
 
-exit(0)
 
 # unpack a list (an array)
 message = []
