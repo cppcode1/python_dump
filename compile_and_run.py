@@ -24,8 +24,8 @@ def analize_file_name(file):
     return (file_name, file_extention)
 
 def clean():
-    print("remove .o files")
     os.system("rm -f *.o")
+    os.system("rm -f app")
 
 clean()
 
@@ -45,5 +45,6 @@ os.system(f"g++ -g -std=c++17 -o app {objects_list}")
 # and start the app
 os.system("clear")
 os.system("./app")
+clean()
 
 
