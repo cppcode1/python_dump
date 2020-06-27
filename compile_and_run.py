@@ -42,7 +42,7 @@ objects_list = ' '.join(objects)
 print(objects_list)
 os.system(f"g++ -g -std=c++17 -o app {objects_list}")
 
-# and start the app
+# and fire up the app
 os.system("clear")
 os.system("./app")
 clean()
