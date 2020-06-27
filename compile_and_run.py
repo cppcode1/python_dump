@@ -34,7 +34,7 @@ for file in files[1:]:
     name, extention = analize_file_name(file)
     print(name, extention)
     if extention == "cpp":
-        os.system(f"g++ -std=c++17 -g -c {file}")
+        os.system(f"g++ -c {file}")
         objects.append(f"{name}.o")
     
 # compile the app
