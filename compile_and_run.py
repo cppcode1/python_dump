@@ -36,6 +36,8 @@ for file in files[1:]:
     if extention == "cpp":
         os.system(f"g++ -c {file}")
         objects.append(f"{name}.o")
+    else
+        objects.append(file)
     
 # compile the app
 objects_list = ' '.join(objects)
