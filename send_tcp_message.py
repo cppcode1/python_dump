@@ -2,6 +2,7 @@ print("tcp client")
 import sys
 import socket
 import signal
+import time
 
 argument_count = len(sys.argv)
 
@@ -14,11 +15,19 @@ if (argument_count != 4):
 ip_address = sys.argv[1]
 port = int(sys.argv[2])
 message = sys.argv[3]
+connected = False
 
 
 print(f"connecting to ip {ip_address} port {port}")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect((ip_address, port))
+
+while not connected:
+    try:
+        client_socket.connect((ip_address, port))
+        connected = True
+    except:
+        print("not connected")
+        time.sleep(3)
 
 
 def close_connection(sig, frame):
