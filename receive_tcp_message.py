@@ -1,4 +1,7 @@
-print("tcp client")
+"""
+python.exe send_tcp_message.py 192.168.43.116 7000 hello
+"""
+print("tcp server")
 import sys
 import socket
 import signal
@@ -21,7 +24,7 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.bind((ip_address, port))
 client_socket.listen(1)
 
-conn, addr = s.accept()
+conn, addr = client_socket.accept()
 with conn:
     print('connected to ', addr)
     while True:
