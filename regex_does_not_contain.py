@@ -1,6 +1,9 @@
 """
 this example uses a negative look ahead (?!.*typedef) to
 find a string that doesn't contain another string.
+
+it helped me to parse a structure. it makes regex to be
+not greedy.
 """
 import re
 import os
