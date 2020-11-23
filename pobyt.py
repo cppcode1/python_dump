@@ -10,9 +10,10 @@ visa3_arrive = datetime.datetime(2016, 11, 24)
 visa3_depart = datetime.datetime(2017, 3, 5)
 visa4_arrive = datetime.datetime(2017, 11, 19)
 visa4_depart = datetime.datetime(2018, 11, 16)
-
-pobyt_start = datetime.datetime(2018, 11, 16)
-pobyt_end = datetime.datetime.now() #current
+pobyt1_start = datetime.datetime(2018, 11, 17) # 2018-11-30 official date
+pobyt1_end = datetime.datetime(2019, 12, 31)
+pobyt2_start = datetime.datetime(2019, 4, 17) # 2018-11-30 official date
+pobyt2_end = datetime.datetime.now()
 
 ranges = []
 #ranges.append((visa1_depart - visa1_arrive).days)
