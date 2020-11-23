@@ -5,6 +5,7 @@ transcription as well. all you have to do it type
 python3 en.py en-pl word
 
 dependencies
+pip3 install clipboard
  2007  inst python3-pip
  2008  pip3  install beautifulsoup4
  2009  pip3 install lxml
@@ -16,6 +17,7 @@ import requests
 import sys
 import re
 from bs4 import BeautifulSoup
+import clipboard
 
 os.system("clear")
 
@@ -70,9 +72,11 @@ for meaning in trainslation:
     print(f"{i} {meaning}")
     i += 1
 
-#echo = word_with_spaces + " " + transcription[1] + " - " +  trainslation[0]
+echo = word_with_spaces + " " + transcription[1] + " - " +  trainslation[0]
 #echo = echo.replace("\n", "")
 #os.system("echo " + echo + " | xclip -selection c")
+
+clipboard.copy(echo)
 
 print()
 print(diki_link)
