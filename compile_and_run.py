@@ -36,7 +36,7 @@ for file in files[1:]:
     if extention == "cpp":
         os.system(f"g++ -c {file}")
         objects.append(f"{name}.o")
-    else
+    else:
         objects.append(file)
     
 # compile the app
@@ -46,7 +46,10 @@ os.system(f"g++ -g -std=c++17 -o app {objects_list}")
 
 # and fire up the app
 os.system("clear")
+os.system("ls -l app")
+print("fire up the app")
 os.system("./app")
 clean()
+print("done")
 
 
