@@ -2,19 +2,20 @@
 import datetime
 import math
 
-
 # arrive and depart visa dates
 visas = []
 visas.append((datetime.datetime(2015, 11, 2), datetime.datetime(2016, 4, 24)))
-[print((visa[1] - visa[0]).days) for visa in visas]
-exit(0)
+visas.append((datetime.datetime(2016, 7, 1), datetime.datetime(2016, 9, 27)))
+visas.append((datetime.datetime(2016, 11, 24), datetime.datetime(2017, 3, 5)))
+visas.append((datetime.datetime(2017, 11, 19), datetime.datetime(2018, 11, 16)))
+visas.append((datetime.datetime(2018, 11, 17), datetime.datetime(2019, 12, 31)))
+visas.append((datetime.datetime(2020, 1, 1), datetime.datetime.now()))
 
-visa2_arrive = datetime.datetime(2016, 7, 1)
-visa2_depart = datetime.datetime(2016, 9, 27)
-visa3_arrive = datetime.datetime(2016, 11, 24)
-visa3_depart = datetime.datetime(2017, 3, 5)
-visa4_arrive = datetime.datetime(2017, 11, 19)
-visa4_depart = datetime.datetime(2018, 11, 16)
+counter = 1
+for visa in visas:
+    print(f"visa{counter}: {(visa[1] - visa[0]).days} days -> {visa[0]} - {visa[1]}")
+    counter = counter + 1
+exit(0)
 pobyt1_start = datetime.datetime(2018, 11, 17) # 2018-11-30 official date
 pobyt1_end = datetime.datetime(2019, 12, 31)
 pobyt2_start = datetime.datetime(2019, 4, 17) # 2018-11-30 official date
