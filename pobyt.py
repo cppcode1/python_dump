@@ -2,8 +2,13 @@
 import datetime
 import math
 
+
 # arrive and depart visa dates
-visa1 = (datetime.datetime(2015, 11, 2), datetime.datetime(2016, 4, 24))
+visas = []
+visas.append((datetime.datetime(2015, 11, 2), datetime.datetime(2016, 4, 24)))
+[print((visa[1] - visa[0]).days) for visa in visas]
+exit(0)
+
 visa2_arrive = datetime.datetime(2016, 7, 1)
 visa2_depart = datetime.datetime(2016, 9, 27)
 visa3_arrive = datetime.datetime(2016, 11, 24)
