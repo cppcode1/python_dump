@@ -2,8 +2,8 @@
 import datetime
 import math
 
-visa1_arrive = datetime.datetime(2015, 11, 2)
-visa1_depart = datetime.datetime(2016, 4, 24)
+# arrive and depart visa dates
+visa1 = (datetime.datetime(2015, 11, 2), datetime.datetime(2016, 4, 24))
 visa2_arrive = datetime.datetime(2016, 7, 1)
 visa2_depart = datetime.datetime(2016, 9, 27)
 visa3_arrive = datetime.datetime(2016, 11, 24)
