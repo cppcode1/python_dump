@@ -13,47 +13,6 @@ visas.append((datetime.datetime(2020, 1, 1), datetime.datetime.now()))
 
 counter = 1
 for visa in visas:
-    print(f"visa{counter}: {(visa[1] - visa[0]).days} days -> {visa[0].strftime('%d/%m/%Y')} - {visa[1].strftime('%d/%m/%Y')}")
+    print(f"visa{counter}: {(visa[1] - visa[0]).days} days, from {visa[0].strftime('%d/%m/%Y')} to {visa[1].strftime('%d/%m/%Y')}")
     counter = counter + 1
 exit(0)
-pobyt1_start = datetime.datetime(2018, 11, 17) # 2018-11-30 official date
-pobyt1_end = datetime.datetime(2019, 12, 31)
-pobyt2_start = datetime.datetime(2019, 4, 17) # 2018-11-30 official date
-pobyt2_end = datetime.datetime.now()
-
-ranges = []
-#ranges.append((visa1_depart - visa1_arrive).days)
-#ranges.append((visa2_depart - visa2_arrive).days)
-#ranges.append((visa3_depart - visa3_arrive).days)
-ranges.append((visa4_depart - visa4_arrive).days)
-ranges.append((pobyt_end - pobyt_start).days)
-
-total = (pobyt_end - visa1_arrive).days
-total_spended = 0
-
-for element in ranges:
-                     total_spended = total_spended + element
-
-missed = (pobyt_end - visa1_arrive).days - total_spended
-print("total spended days: {0} (or {1} years and {2} days)".format(total_spended, total_spended / 365, total_spended % 365))
-print("total: {0} (or {1} years and {2} days)".format(total, total / 365, total % 365))
-print("I missed {0} days".format(missed))
-
-break_max_allowed = 6 * 31
-break_total = 10 * 31
-
-if missed > break_total:
-                     print("you exceeded a limit of total break ({0})".format(break_total))
-
-miss1 = abs((visa1_depart - visa2_arrive).days)
-miss2 = abs((visa2_depart - visa3_arrive).days)
-miss3 = abs((visa3_depart - visa4_arrive).days)
-miss4 = abs((visa4_depart - pobyt_start).days)
-print("max allowed break: {0}".format(break_max_allowed))
-print(miss1)
-print(miss2)
-print(miss3)
-print(miss4)
-
-pobyt_staty = 5 * 365
-print("pozostalo: {0}".format((pobyt_staty - total_spended) / 365))
