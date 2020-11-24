@@ -13,7 +13,7 @@ visas.append((datetime.datetime(2020, 1, 1), datetime.datetime.now()))
 
 counter = 1
 for visa in visas:
-    print(f"visa{counter}: {(visa[1] - visa[0]).days} days -> {visa[0]} - {visa[1]}")
+    print(f"visa{counter}: {(visa[1] - visa[0]).days} days -> {visa[0].strftime('%d/%m/%Y')} - {visa[1]}")
     counter = counter + 1
 exit(0)
 pobyt1_start = datetime.datetime(2018, 11, 17) # 2018-11-30 official date
