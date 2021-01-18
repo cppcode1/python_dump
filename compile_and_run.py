@@ -45,8 +45,11 @@ print(objects_list)
 os.system(f"g++ -g -std=c++17 -o app {objects_list}")
 
 # and fire up the app
-os.system("clear")
+#os.system("clear")
+print("the app lies here:")
 os.system("ls -l app")
+
+print("")
 print("fire up the app")
 os.system("./app")
 clean()
